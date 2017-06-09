@@ -194,13 +194,11 @@ plot_tripulantes_classe( titanic_df.groupby('Pclass'), 'Passageiros agrupados po
 plot_tripulantes_classe( sobreviventes.groupby('Pclass'), 'Sobreviventes agrupados por classe de embarque')
 
 passageiros_sexo = titanic_df.groupby('Sex')
-#print_group_sex(passageiros_sexo, 'Passageiros')
 plot_passageiros_sexo( passageiros_sexo.get_group('male')['PassengerId'].count(), \
                        passageiros_sexo.get_group('female')['PassengerId'].count(), \
                        'Passageiros agrupados por sexo')
 
 sobreviventes_sexo = sobreviventes.groupby('Sex')
-#print_group_sex(sobreviventes_sexo, 'Sobreviventes')
 plot_passageiros_sexo( sobreviventes_sexo.get_group('male')['PassengerId'].count(), \
                        sobreviventes_sexo.get_group('female')['PassengerId'].count(), \
                       'Sobreviventes agrupados por sexo')
